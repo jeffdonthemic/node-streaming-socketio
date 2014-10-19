@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+      var url = window.location.href.split("/");
+      var socket =  io.connect(url[0] + "//" + url[2]);    
+      socket.on('record-processed', function (data) {
+        var results = JSON.parse(data);
+        console.log(results);
+        $('<div>Received Account: '+results['sobject']['Name']+'</div>').prependTo('#messages');
+      })
+    </script>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>Waiting for messages to magically appear below. Go update an account to watch the magic!</p>
+    <div id="messages"></div>
+  </body>
+</html>
