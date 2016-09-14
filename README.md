@@ -3,7 +3,7 @@ node-streaming-socketio
 
 Node demo that streams newly created and updated Account records in Salesforce.com to the browser using socket.io. You can run the demo by opening two browsers:
 
-1. [salesforce CRUD demo with Node](http://node-nforce-demo.herokuapp.com/accounts/new) - Create a new Account record in this app.
+1. [salesforce CRUD demo with Node](http://node-nforce-demo.herokuapp.com) - Create a new Account record in this app.
 2. [node-streaming-socketio demo](http://node-streaming-socketio.herokuapp.com/) - New Account record are streamed to this app and display in the browser using socket.io.
 
 ### Setup Remote Access in Salesforce.com
