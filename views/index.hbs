@@ -7,7 +7,7 @@
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
       var url = window.location.href.split("/");
-      var socket =  io.connect(url[0] + "//" + url[2]);    
+      var socket =  io.connect(url[0] + "//" + url[2]);
       socket.on('record-processed', function (data) {
         var results = JSON.parse(data);
         console.log(results);
